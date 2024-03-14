@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/assets/style.css">
   <title>Boolzapp UI</title>
-  
+
+  <!-- VUE -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,19 +17,21 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
 
-  <!-- ICONS -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css' integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==' crossorigin='anonymous'>
+  <!-- Font Awesome -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css'
+    integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=='
+    crossorigin='anonymous'>
 </head>
 
 <body>
-  
+
   <!-- CONTAINER -->
   <div class="container">
     <div class="col left">
       <!-- LEFT COLUMN -->
       <div class="head left">
         <div class="head-img">
-          <img src="img/avatar_io.jpg" alt="io">
+          <img src="/assets/img/avatar_io.jpg" alt="io">
         </div>
         <div class="head-buttons">
           <ul>
@@ -38,7 +44,9 @@
 
       <div class="notify">
         <span><i class="fa-solid fa-bell-slash"></i></span>
-        <span class="desc"><h3>Ricevi notifiche di nuovi messaggi</h3><a href="">Attiva notifiche desktop</a></span>
+        <span class="desc">
+          <h3>Ricevi notifiche di nuovi messaggi</h3><a href="">Attiva notifiche desktop</a>
+        </span>
       </div>
 
       <div class="search">
@@ -53,14 +61,14 @@
           <li>
             <a href="">
               <div class="chat-img">
-                <img src="img/avatar_1.jpg" alt="">
+                <img src="/assets/img/avatar_1.jpg" alt="">
               </div>
-          
+
               <div class="chat-name">
                 <h3>Michele</h3>
                 <span>Lorem ipsum dolor sit amet.</span>
               </div>
-          
+
               <div class="time">16:20</div>
             </a>
           </li>
@@ -68,14 +76,14 @@
           <li>
             <a href="">
               <div class="chat-img">
-                <img src="img/avatar_2.jpg" alt="">
+                <img src="/assets/img/avatar_2.jpg" alt="">
               </div>
-              
+
               <div class="chat-name">
                 <h3>Fabio</h3>
                 <span>Lorem ipsum dolor sit amet.</span>
               </div>
-              
+
               <div class="time">16:05</div>
             </a>
           </li>
@@ -83,14 +91,14 @@
           <li>
             <a href="">
               <div class="chat-img">
-                <img src="img/avatar_3.jpg" alt="">
+                <img src="/assets/img/avatar_3.jpg" alt="">
               </div>
-          
+
               <div class="chat-name">
                 <h3>Samuele</h3>
                 <span>Lorem ipsum dolor sit amet.</span>
               </div>
-          
+
               <div class="time">16:03</div>
             </a>
           </li>
@@ -98,14 +106,14 @@
           <li>
             <a href="">
               <div class="chat-img">
-                <img src="img/avatar_4.jpg" alt="">
+                <img src="/assets/img/avatar_4.jpg" alt="">
               </div>
-          
+
               <div class="chat-name">
                 <h3>Alessandro B.</h3>
                 <span>Lorem ipsum dolor sit amet.</span>
               </div>
-          
+
               <div class="time">15:50</div>
             </a>
           </li>
@@ -113,14 +121,14 @@
           <li>
             <a href="">
               <div class="chat-img">
-                <img src="img/avatar_5.jpg" alt="">
+                <img src="/assets/img/avatar_5.jpg" alt="">
               </div>
-          
+
               <div class="chat-name">
                 <h3>Alessandro L.</h3>
                 <span>Lorem ipsum dolor sit amet.</span>
               </div>
-          
+
               <div class="time">15:45</div>
             </a>
           </li>
@@ -128,14 +136,14 @@
           <li>
             <a href="">
               <div class="chat-img">
-                <img src="img/avatar_6.jpg" alt="">
+                <img src="/assets/img/avatar_6.jpg" alt="">
               </div>
-          
+
               <div class="chat-name">
                 <h3>Claudia</h3>
                 <span>Lorem ipsum dolor sit amet.</span>
               </div>
-          
+
               <div class="time">15:40</div>
             </a>
           </li>
@@ -143,14 +151,14 @@
           <li>
             <a href="">
               <div class="chat-img">
-                <img src="img/avatar_7.jpg" alt="">
+                <img src="/assets/img/avatar_7.jpg" alt="">
               </div>
-          
+
               <div class="chat-name">
                 <h3>Federico</h3>
                 <span>Lorem ipsum dolor sit amet.</span>
               </div>
-          
+
               <div class="time">15:22</div>
             </a>
           </li>
@@ -158,14 +166,14 @@
           <li>
             <a href="">
               <div class="chat-img">
-                <img src="img/avatar_8.jpg" alt="">
+                <img src="/assets/img/avatar_8.jpg" alt="">
               </div>
-          
+
               <div class="chat-name">
                 <h3>Davide</h3>
                 <span>Lorem ipsum dolor sit amet.</span>
               </div>
-          
+
               <div class="time">15:15</div>
             </a>
           </li>
@@ -175,17 +183,17 @@
               <div class="chat-img">
                 <img src="img/avatar_3.jpg" alt="">
               </div>
-          
+
               <div class="chat-name">
                 <h3>Samuele</h3>
                 <span>Lorem ipsum dolor sit amet.</span>
               </div>
-          
+
               <div class="time">16:03</div>
             </a>
           </li>
 
-          
+
         </ul>
       </div>
     </div>
@@ -193,14 +201,14 @@
     <!-- RIGHT COLUMN -->
     <div class="col right">
       <div class="head right">
-        
+
         <div class="head-img">
           <img src="img/avatar_1.jpg" alt="">
           <div class="name">
             <h3>Michele</h3><span>Ultimo accesso oggi alle 16:26</span>
           </div>
         </div>
-        
+
         <div class="head-buttons">
           <ul>
             <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
@@ -211,12 +219,14 @@
       </div>
 
       <div class="main-chat">
-        
+
         <div class="container">
 
           <span class="message">
             <div class="text">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, beatae fugiat culpa perspiciatis doloribus veniam. Tenetur a fugiat fuga sit maiores dignissimos, cupiditate quis voluptas neque reprehenderit suscipit temporibus. Voluptate!
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, beatae fugiat culpa perspiciatis
+                doloribus veniam. Tenetur a fugiat fuga sit maiores dignissimos, cupiditate quis voluptas neque
+                reprehenderit suscipit temporibus. Voluptate!
               </p>
             </div>
 
@@ -234,15 +244,17 @@
             </div>
 
           </span>
-          
+
           <span class="message">
             <div class="text">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, beatae fugiat culpa perspiciatis doloribus
-                veniam. Tenetur a fugiat fuga sit maiores dignissimos, cupiditate quis voluptas neque reprehenderit suscipit
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, beatae fugiat culpa perspiciatis
+                doloribus
+                veniam. Tenetur a fugiat fuga sit maiores dignissimos, cupiditate quis voluptas neque reprehenderit
+                suscipit
                 temporibus. Voluptate!
               </p>
             </div>
-          
+
             <div class="chat-time">
               <i class="fa-solid fa-chevron-down"></i>
               <span>16:15</span>
@@ -264,9 +276,10 @@
 
       </div>
 
-    </div> 
+    </div>
   </div>
-  
-  
+
+  <script src="assets/script.js"></script>
 </body>
+
 </html>
