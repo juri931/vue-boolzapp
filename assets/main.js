@@ -1,6 +1,6 @@
 const { createApp } = Vue;
 
-import contacts from "contacts.js";
+import contacts from "./contacts.js";
 
 createApp({
   data() {
