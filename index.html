@@ -60,7 +60,7 @@
       <!-- Contatto -->
       <div class="contacts">
 
-        <div v-for="contact in contacts" class="contact">
+        <div v-for="contact in visibleContacts" class="contact">
           <div class="contact-logo">
             <img :src="`assets/img/${contact.avatar}`" :alt="contact.name">
           </div>
@@ -101,7 +101,7 @@
 
         <div class="container">
 
-          <span class="message">
+          <span class="message sent">
             <div class="text">
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, beatae fugiat culpa perspiciatis
                 doloribus veniam. Tenetur a fugiat fuga sit maiores dignissimos, cupiditate quis voluptas neque
@@ -124,7 +124,7 @@
 
           </span>
 
-          <span class="message">
+          <span class="message reeived">
             <div class="text">
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, beatae fugiat culpa perspiciatis
                 doloribus

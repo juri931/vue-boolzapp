@@ -29,7 +29,7 @@ body {
 .col.left {
   width: 25%;
   flex-flow: column;
-  max-height: 95vh;
+  height: 95vh;
   overflow: auto;
   overflow-x: hidden;
 }
@@ -37,7 +37,7 @@ body {
 .head {
   background-color: #e9e9ea;
   padding: 10px;
-  height: 10%;
+  height: 80px;
 }
 
 .head.left {
@@ -45,7 +45,6 @@ body {
   border-right: 2px solid lightgray;
   justify-content: space-between;
   align-items: center;
-  max-height: 90px;
 }
 
 img {
@@ -71,13 +70,12 @@ img {
 .col.right {
   width: 75%;
   flex-flow: column;
-  max-height: 95vh;
+  height: 84vh;
 }
 
 .head.right {
   display: flex;
   justify-content: space-between;
-  max-height: 90px;
 }
 
 .head-img {
@@ -179,7 +177,7 @@ img {
 .main-chat {
   display: flex;
   height: 100%;
-  background: url(./assets/img/mine.jpg);
+  background: url(img/mine.jpg);
   background-size: contain;
 }
 

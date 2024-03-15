@@ -9,7 +9,10 @@ createApp({
     };
   },
   methods: {},
-  created() {
-    console.log(contacts);
+  computed: {
+    visibleContacts() {
+      return contacts.filter((contact) => contact.visible);
+    },
   },
+  created() {},
 }).mount("#app");
