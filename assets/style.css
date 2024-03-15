@@ -152,8 +152,11 @@ img {
   display: flex;
   text-decoration: none;
   align-items: center;
-  justify-content: space-between;
   color: black;
+}
+
+.contact-info {
+  margin-left: 10px;
 }
 
 .chat-list span {
