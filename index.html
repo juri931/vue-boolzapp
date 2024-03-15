@@ -62,8 +62,9 @@
 
         <div v-for="contact in contacts" class="contact">
           <div class="contact-logo">
-            <img :src="`img/${contact.avatar}`" :alt="contact.name">
+            <img :src="`assets/img/${contact.avatar}`" :alt="contact.name">
           </div>
+
           <div class="contact-info">
             <h3>
               <span class="contact-name">name{{contact.name}}</span>

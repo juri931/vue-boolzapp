@@ -164,10 +164,6 @@ img {
   background-color: lightgray;
 }
 
-.contact-logo {
-  width: 20%;
-}
-
 .time {
   display: flex;
   width: 12%;
@@ -180,7 +176,7 @@ img {
 .main-chat {
   display: flex;
   height: 100%;
-  background: url(../assets/img/mine.jpg);
+  background: url(./assets/img/mine.jpg);
   background-size: contain;
 }
 
