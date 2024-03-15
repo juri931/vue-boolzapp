@@ -164,14 +164,8 @@ img {
   background-color: lightgray;
 }
 
-.contact-name {
-  width: fit-content;
-  width: 60%;
-}
-
-.contact-logo img {
-  width: 100%;
-  height: 100%;
+.contact-logo {
+  width: 20%;
 }
 
 .time {
