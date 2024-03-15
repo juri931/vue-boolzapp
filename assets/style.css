@@ -143,15 +143,12 @@ img {
 }
 
 /* CHAT LIST */
-.chat-list li {
+.contacts .contact {
   list-style: none;
   font-size: .9rem;
   padding: 5px;
   border: 1px solid lightgray;
   background: white;
-}
-
-.chat-list a {
   display: flex;
   text-decoration: none;
   align-items: center;
@@ -159,19 +156,22 @@ img {
   color: black;
 }
 
-.chat-list a span {
+.chat-list span {
   color: rgb(117, 117, 117);
 }
 
-.chat-list li:hover {
+.contact:hover {
   background-color: lightgray;
 }
 
-.chat-name {
-  display: flex;
-  flex-flow: column;
+.contact-name {
   width: fit-content;
   width: 60%;
+}
+
+.contact-logo img {
+  width: 100%;
+  height: 100%;
 }
 
 .time {

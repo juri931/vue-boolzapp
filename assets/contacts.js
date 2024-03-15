@@ -1,7 +1,7 @@
 const contacts = [
   {
     name: "Michele",
-    avatar: "img/avatar_1.jpg",
+    avatar: "avatar_1.jpg",
     visible: true,
     messages: [
       {
@@ -23,7 +23,7 @@ const contacts = [
   },
   {
     name: "Fabio",
-    avatar: "./img/avatar_2.jpg",
+    avatar: "assets/img/avatar_2.jpg",
     visible: true,
     messages: [
       {

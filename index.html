@@ -57,150 +57,27 @@
         </div>
       </div>
 
-      <div class="chat-list">
-        <ul>
-          <li>
-            <a href="">
-              <div class="chat-img">
-                <img src="/assets/img/avatar_1.jpg" alt="">
-              </div>
+      <!-- Contatto -->
+      <div class="contacts">
 
-              <div class="chat-name">
-                <h3>Michele</h3>
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
+        <div v-for="contact in contacts" class="contact">
+          <div class="contact-logo">
+            <img :src="`img/${contact.avatar}`" :alt="contact.name">
+          </div>
+          <div class="contact-info">
+            <h3>
+              <span class="contact-name">name{{contact.name}}</span>
+              <span class="time f-right">time</span>
+            </h3>
+            <small>ultimo messaggio</small>
+          </div>
+        </div>
 
-              <div class="time">16:20</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <div class="chat-img">
-                <img src="/assets/img/avatar_2.jpg" alt="">
-              </div>
-
-              <div class="chat-name">
-                <h3>Fabio</h3>
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <div class="time">16:05</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <div class="chat-img">
-                <img src="/assets/img/avatar_3.jpg" alt="">
-              </div>
-
-              <div class="chat-name">
-                <h3>Samuele</h3>
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <div class="time">16:03</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <div class="chat-img">
-                <img src="/assets/img/avatar_4.jpg" alt="">
-              </div>
-
-              <div class="chat-name">
-                <h3>Alessandro B.</h3>
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <div class="time">15:50</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <div class="chat-img">
-                <img src="/assets/img/avatar_5.jpg" alt="">
-              </div>
-
-              <div class="chat-name">
-                <h3>Alessandro L.</h3>
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <div class="time">15:45</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <div class="chat-img">
-                <img src="/assets/img/avatar_6.jpg" alt="">
-              </div>
-
-              <div class="chat-name">
-                <h3>Claudia</h3>
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <div class="time">15:40</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <div class="chat-img">
-                <img src="/assets/img/avatar_7.jpg" alt="">
-              </div>
-
-              <div class="chat-name">
-                <h3>Federico</h3>
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <div class="time">15:22</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <div class="chat-img">
-                <img src="/assets/img/avatar_8.jpg" alt="">
-              </div>
-
-              <div class="chat-name">
-                <h3>Davide</h3>
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <div class="time">15:15</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="">
-              <div class="chat-img">
-                <img src="img/avatar_3.jpg" alt="">
-              </div>
-
-              <div class="chat-name">
-                <h3>Samuele</h3>
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-
-              <div class="time">16:03</div>
-            </a>
-          </li>
-
-
-        </ul>
       </div>
     </div>
 
     <!-- RIGHT COLUMN -->
-    <div class="col right">
+    <!-- <div class="col right">
       <div class="head right">
 
         <div class="head-img">
@@ -264,20 +141,20 @@
 
         </div>
 
-      </div>
+      </div> -->
 
-      <!-- TEXT ENTER AREA -->
-      <div class="text-enter">
+    <!-- TEXT ENTER AREA -->
+    <div class="text-enter">
 
-        <i class="fa-regular fa-face-smile"></i>
+      <i class="fa-regular fa-face-smile"></i>
 
-        <textarea placeholder="Scrivi un messaggio"></textarea>
+      <textarea placeholder="Scrivi un messaggio"></textarea>
 
-        <i class="fa-solid fa-microphone"></i>
-
-      </div>
+      <i class="fa-solid fa-microphone"></i>
 
     </div>
+
+  </div>
   </div>
 
   <script type="module" src="assets/main.js"></script>
