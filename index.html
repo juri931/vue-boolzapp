@@ -60,7 +60,8 @@
       <!-- Contatto -->
       <div class="contacts">
 
-        <div v-for="contact in visibleContacts" class="contact">
+        <div v-for="contact in visibleContacts" class="contact" :class="{'active': contact === activeContact}"
+          @click="activeContact = contact">
           <div class="contact-logo">
             <img :src="`assets/img/${contact.avatar}`" :alt="contact.name">
           </div>
@@ -82,9 +83,9 @@
       <div class="head right">
 
         <div class="head-img">
-          <img src="img/avatar_1.jpg" alt="">
+          <img :src="`assets/img/${activeContact.avatar}`" alt="">
           <div class="name">
-            <h3>Michele</h3><span>Ultimo accesso oggi alle 16:26</span>
+            <h3>{{activeContact.name}}</h3><span>Ultimo accesso oggi alle 16:26</span>
           </div>
         </div>
 
@@ -101,16 +102,12 @@
 
         <div class="container">
 
-          <span class="message sent">
-            <div class="text">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, beatae fugiat culpa perspiciatis
-                doloribus veniam. Tenetur a fugiat fuga sit maiores dignissimos, cupiditate quis voluptas neque
-                reprehenderit suscipit temporibus. Voluptate!
-              </p>
-            </div>
+          <span class="message sent" v-for="message in activeContact.messages" :class="message.status">
+            <div class="text">{{message.message}}</div>
 
             <div class="chat-time">
-              <i class="fa-solid fa-chevron-down"></i>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+              <span class="message-date">{{message.date}}</span>
               <div class="chevron">
                 <ul>
                   <li><a href=""></a>Info messaggio</li>
@@ -119,25 +116,8 @@
                   <li><a href=""></a>Inoltra</li>
                 </ul>
               </div>
-              <span>16:13</span>
             </div>
 
-          </span>
-
-          <span class="message reeived">
-            <div class="text">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, beatae fugiat culpa perspiciatis
-                doloribus
-                veniam. Tenetur a fugiat fuga sit maiores dignissimos, cupiditate quis voluptas neque reprehenderit
-                suscipit
-                temporibus. Voluptate!
-              </p>
-            </div>
-
-            <div class="chat-time">
-              <i class="fa-solid fa-chevron-down"></i>
-              <span>16:15</span>
-            </div>
           </span>
 
         </div>

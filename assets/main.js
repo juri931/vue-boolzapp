@@ -6,13 +6,16 @@ createApp({
   data() {
     return {
       contacts,
+      activeContact: null,
     };
   },
   methods: {},
   computed: {
     visibleContacts() {
-      return contacts.filter((contact) => contact.visible);
+      return this.contacts.filter((contact) => contact.visible);
     },
   },
-  created() {},
+  created() {
+    this.activeContact = this.contacts[0];
+  },
 }).mount("#app");

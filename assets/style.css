@@ -152,6 +152,12 @@ img {
   position: relative;
 }
 
+.contact.active {
+  border-bottom-color: transparent;
+  background: rgba(229, 222, 213, 0.776);
+  border-right: none;
+}
+
 .contact-logo {
   width: fit-content;
   display: inline;
@@ -194,10 +200,10 @@ img {
 .message {
   display: flex;
   font-weight: bold;
-  width: 65%;
   border-radius: 15px;
-  padding: 15px;
+  padding: 20px;
   margin: 5px 0;
+  position: relative;
 }
 
 .chevron {
@@ -214,6 +220,7 @@ img {
 .chevron li {
   padding: 10px;
   list-style: none;
+  color: black;
 }
 
 .chevron li:hover {
@@ -221,36 +228,42 @@ img {
   cursor: pointer;
 }
 
-.chat-time {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-}
-
 .chat-time i {
   cursor: pointer;
+  position: absolute;
+  font-size: .8rem;
+  top: 5px;
+  right: 5px;
 }
 
 .chat-time:hover {
   .chevron {
     display: block;
+    z-index: 99;
   }
 }
 
-.chat-time i,
-.chat-time span {
-  text-align: center;
+.chat-time {
   color: rgb(198, 197, 197);
 }
 
-.main-chat .message:first-of-type {
+.message.sent {
   align-self: flex-end;
   background-color: rgb(219, 247, 184);
 }
 
-.main-chat .message:last-of-type {
+.message.received {
   align-self: flex-start;
+  justify-content: space-between;
   background-color: white;
+}
+
+.message-date {
+  width: fit-content;
+  position: absolute;
+  font-size: .6rem;
+  bottom: 0;
+  right: 7px;
 }
 
 /* TEXT ENTER */
