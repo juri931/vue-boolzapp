@@ -209,8 +209,6 @@ img {
 .chevron {
   background-color: white;
   border-radius: 3px;
-  margin-top: 20px;
-  right: 20%;
   display: flex;
   position: absolute;
   box-shadow: rgb(203, 203, 203) 3px 3px 4px 3px;
