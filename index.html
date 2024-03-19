@@ -4,21 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- LUXON -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+
   <!-- VUE -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css'
-    integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=='
-    crossorigin='anonymous'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css' integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==' crossorigin='anonymous'>
   <link rel="stylesheet" href="assets/style.css">
+  
   <title>Boolzapp VUE</title>
 
 
@@ -53,15 +54,23 @@
       <div class="search">
         <div class="content">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input id="contact-filter" v-model="searchStr" name="search" placeholder="Cerca o inizia una nuova chat">
+          <input 
+            id="contact-filter" 
+            v-model="doSearch()" 
+            name="search" 
+            placeholder="Cerca o inizia una nuova chat">
         </div>
       </div>
 
       <!-- Contatto -->
       <div class="contacts">
 
-        <div v-for="contact in visibleContacts" class="contact" :class="{'active': contact === activeContact}"
+        <div 
+          v-for="contact in visibleContacts" 
+          class="contact" 
+          :class="{'active': contact === activeContact}"
           @click="activeContact = contact">
+          
           <div class="contact-logo">
             <img :src="`assets/img/${contact.avatar}`" :alt="contact.name">
           </div>
@@ -102,7 +111,11 @@
 
         <div class="container">
 
-          <span class="message sent" v-for="message in activeContact.messages" :class="message.status">
+          <span 
+            class="message sent" 
+            v-for="message in activeContact.messages" 
+            :class="message.status">
+            
             <div class="text">{{message.message}}</div>
 
             <div class="chat-time">
@@ -129,14 +142,16 @@
 
         <i class="fa-regular fa-face-smile"></i>
 
-        <textarea placeholder="Scrivi un messaggio"></textarea>
+        <textarea 
+          v-model.trim="newMessage" 
+          @keyup.enter="addNewMessage" 
+          placeholder="Scrivi un messaggio"></textarea>
 
         <i class="fa-solid fa-microphone"></i>
 
       </div>
 
     </div>
-
 
     <script type="module" src="assets/main.js"></script>
 
